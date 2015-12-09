@@ -9,6 +9,7 @@ function base_init(){
 	if(getCookie(appId)=="" || getCookie(appId)=="undefiened"){
 		document.getElementById('login').style.position="inherit";
 		document.getElementById('login').style.visibility="visible";
+		document.getElementById('dashboard').style.position="absolute";
 		document.getElementById('dashboard').style.visibility="hidden";
 	}
 	else{
@@ -20,6 +21,7 @@ function base_init(){
 		sex=getCookie(appId+"SEX");
 		document.getElementById('login').style.position="absolute";
 		document.getElementById('login').style.visibility="hidden";
+		document.getElementById('dashboard').style.position="inherit";
 		document.getElementById('dashboard').style.visibility="visible";
 		setvalueIntoTag("data-name",name);
 		setvalueIntoTag("data-dob",dd+"/"+mm+"/"+yy);
@@ -58,6 +60,7 @@ function login () {
 	}
 	else{
 		alert("Please fillup properly !");
+		document.getElementById('txtName').focus();
 	}
 }
 
