@@ -1,7 +1,7 @@
 # Funbok
-Funny Facebook Apps Development  
+Funny Facebook Apps Development in simple easy steps. 
 
-## Programming Language Require to Develop:
+## Programming Language Required to Develop:
   1. HTML,HTML5
   2. CSS
   3. JavaScript  
