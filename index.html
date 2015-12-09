@@ -1,58 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>FunBok</title>
-	<script>
-  		window.fbAsyncInit = function() {
-    		FB.init({
-      			appId      : '1497317597238119',
-      			xfbml      : true,
-      			version    : 'v2.5'
-    		});
-
-    		// ADD ADDITIONAL FACEBOOK CODE HERE
-  		};
-
-  		(function(d, s, id){
-     		var js, fjs = d.getElementsByTagName(s)[0];
-     		if (d.getElementById(id)) {return;}
-     		js = d.createElement(s); js.id = id;
-     		js.src = "//connect.facebook.net/en_US/sdk.js";
-     		fjs.parentNode.insertBefore(js, fjs);
-   		}(document, 'script', 'facebook-jssdk'));
-	</script>
+  <title>Funbok</title>
+  <script type="text/javascript" src="./script/cookie.js"></script>
+  <script type="text/javascript" src="./script/main.js"></script>
 </head>
-<body>
+<body onload="base_init();">
+<div id="login">
+  Name:<input type="text" id="txtName" />
+  Date Of Birth:<input type="date" id="txtDob" />
+  Sex:<input type="radio" name="sex" id="txtMale" value="Male" checked="true" /><lebel for="#txtMale">Male</lebel>
+      <input type="radio" name="sex" id="txtFemale" value="Female" /><lebel for="#txtFemale">Female</lebel>
+  <input type="button" value="Login" onclick="login();" />
+</div>
+<div id="dashboard">
+  Welcome <data-name></data-name><br/>
+  Name:<data-name></data-name><br/>
+  DOB:<data-dob></data-dob><br/>
+  Sex:<data-sex></data-sex><br/>
 
-	<h1 id="fb-welcome"></h1>
-
-
-
-<script type="text/javascript">
-	// Place following code after FB.init call.
-
-function onLogin(response) {
-  if (response.status == 'connected') {
-    FB.api('/me?fields=first_name', function(data) {
-      var welcomeBlock = document.getElementById('fb-welcome');
-      welcomeBlock.innerHTML = 'Hello, ' + data.first_name + '!';
-    });
-  }
-}
-
-FB.getLoginStatus(function(response) {
-  // Check login status on load, and if the user is
-  // already logged in, go directly to the welcome message.
-  if (response.status == 'connected') {
-    onLogin(response);
-  } else {
-    // Otherwise, show Login dialog first.
-    FB.login(function(response) {
-      onLogin(response);
-    }, {scope: 'user_friends, email'});
-  }
-});
-</script>
+  <br/><button onclick="logout();">Logout</button>
+</div>
 
 </body>
 </html>
