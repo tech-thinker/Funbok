@@ -7,21 +7,70 @@
   <link rel="stylesheet" type="text/css" href="./style/main.css" />
 </head>
 <body onload="base_init();">
+<center>
 <div id="login">
-  Name:<input type="text" id="txtName" />
-  Date Of Birth:<input type="date" id="txtDob" />
-  Sex:<input type="radio" name="sex" id="txtMale" value="Male" checked="true" /><lebel for="#txtMale">Male</lebel>
-      <input type="radio" name="sex" id="txtFemale" value="Female" /><lebel for="#txtFemale">Female</lebel>
-  <input type="button" value="Login" onclick="login();" />
+  <table>
+  <h1>Put your details :</h1>
+  <tbody>
+  <tr>
+    <td>Name:</td>
+    <td><input type="text" id="txtName" /></td>
+  </tr>
+  <tr>
+    <td>Date Of Birth:</td>
+    <td>
+        <script type="text/javascript">
+          document.write("<select id='dd'>");
+          for(var i=1; i<=31; i++){
+            document.write("<option value='"+i+"'>"+i+"</option>");
+          }
+          document.write("</select> &nbsp;");
+          document.write("<select id='mm'>");
+          for(var i=1; i<=12; i++){
+            document.write("<option value='"+i+"'>"+i+"</option>");
+          }
+          document.write("</select> &nbsp;");
+          document.write("<select id='yy'>");
+          for(var i=2015; i>=1960; i--){
+            document.write("<option value='"+i+"'>"+i+"</option>");
+          }
+          document.write("</select>");
+        </script>
+        
+    </td>
+  </tr>
+  <tr>
+    <td>Sex:</td>
+    <td><input type="radio" name="sex" id="txtMale" value="Male" checked="true" /><lebel for="#txtMale">Male</lebel>
+      <input type="radio" name="sex" id="txtFemale" value="Female" /><lebel for="#txtFemale">Female</lebel></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="right"><input type="button" id="btnlogin" value="Login" onclick="login();" /></td>
+  </tr>
+  <tr>
+    <td colspan="2" width="300"><br/>
+      Note: Your data will safe, we do not save it on server. It need to compute for your result.
+    </td>
+  </tr>
+  </tbody>
+  </table>
 </div>
+</center>
+<center>
 <div id="dashboard">
-  Welcome <data-name></data-name><br/>
-  Name:<data-name></data-name><br/>
-  DOB:<data-dob></data-dob><br/>
-  Sex:<data-sex></data-sex><br/>
-
-  <br/><button onclick="logout();">Logout</button>
+  <div id="toolbar">
+  <div style="width:345px; position:relative;">
+    Welcome <data-name></data-name>&nbsp;&nbsp;&nbsp;
+    <a href="javascript:logout();">Logout</a></div>
+  </div>
+  <div id="content">
+    Welcome <data-name></data-name><br/>
+    Name:<data-name></data-name><br/>
+    DOB:<data-dob></data-dob><br/>
+    Sex:<data-sex></data-sex><br/>
+  </div>
 </div>
-
+</center>
 </body>
 </html>

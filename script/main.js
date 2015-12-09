@@ -1,6 +1,8 @@
 var appId="MRASIFGITHUBOPENAPPS";
 var name="";
-var dob="";
+var dd="";
+var mm="";
+var yy="";
 var sex="";
 
 function base_init(){
@@ -12,13 +14,15 @@ function base_init(){
 	else{
 		
 		name=getCookie(appId+"NAME");
-		dob=getCookie(appId+"DOB");
+		dd=getCookie(appId+"DD");
+		mm=getCookie(appId+"MM");
+		yy=getCookie(appId+"YY");
 		sex=getCookie(appId+"SEX");
 		document.getElementById('login').style.position="absolute";
 		document.getElementById('login').style.visibility="hidden";
 		document.getElementById('dashboard').style.visibility="visible";
 		setvalueIntoTag("data-name",name);
-		setvalueIntoTag("data-dob",dob);
+		setvalueIntoTag("data-dob",dd+"/"+mm+"/"+yy);
 		setvalueIntoTag("data-sex",sex);
 	}
 }
@@ -32,7 +36,9 @@ function setvalueIntoTag(tag,value){
 
 function login () {
 	name=document.getElementById('txtName').value;	//document.getElementsByTagName('')
-	dob=document.getElementById('txtDob').value;
+	dd=document.getElementById('dd').value;
+	mm=document.getElementById('mm').value;
+	yy=document.getElementById('yy').value;
 	if(document.getElementById('txtMale').checked==true){
 		sex="Male";
 	}
@@ -40,10 +46,12 @@ function login () {
 		sex="Female";
 	}
 	
-	if(name!="" && dob!="" && sex!=""){
+	if(name!="" && dd!="" && mm!="" && yy!="" && sex!=""){
 		setCookie(appId,"1010101",3);
 		setCookie(appId+"NAME",name,3);
-		setCookie(appId+"DOB",dob,3);
+		setCookie(appId+"DD",dd,3);
+		setCookie(appId+"MM",mm,3);
+		setCookie(appId+"YY",yy,3);
 		setCookie(appId+"SEX",sex,3);
 		alert("Thank you...");
 		base_init();

@@ -1,4 +1,52 @@
 body{
 	margin: 0px;
-	background: #111;
+	background-image:url("../images/bg.jpg");
+}
+#login{
+	margin-top: 100px;
+	background-color: #222;
+	border: 1px solid yellow;
+	width: 500px;
+	height: 300px;
+	color: silver;
+}
+#login h1{
+	color: #00FF00;
+}
+#txtName{
+	width: 200px;
+}
+#dd{
+	width: 50px;
+}
+#mm{
+	width: 50px;
+}
+#yy{
+	width: 90px;
+}
+#btnlogin{
+	width: 210px;
+}
+#dashboard{
+	width: 90%;
+	max-width: 700px;
+	text-align: left;
+	border: 1px solid red;
+	margin-top: 10px;
+	/*background-color: rgba(0,0,0,0.8);*/
+	background-image: url("../images/bg2.jpg");
+	color: black;
+}
+#toolbar{
+	background-color: rgba(0,0,0,0.8);
+	padding: 5px;
+	color: red;
+	border-bottom: 1px solid black;
+}
+#toolbar a{
+	text-decoration: none;
+}
+#content{
+	padding: 5px;
 }
