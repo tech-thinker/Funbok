@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Funbok</title>
+  <script type="text/javascript" src="./script/cookie.js"></script>
+  <script type="text/javascript" src="./script/main.js"></script>
+</head>
+<body onload="base_init();">
+<div id="login">
+  Name:<input type="text" id="txtName" />
+  Date Of Birth:<input type="date" id="txtDob" />
+  Sex:<input type="radio" name="sex" id="txtMale" value="Male" checked="true" /><lebel for="#txtMale">Male</lebel>
+      <input type="radio" name="sex" id="txtFemale" value="Female" /><lebel for="#txtFemale">Female</lebel>
+  <input type="button" value="Login" onclick="login();" />
+</div>
+<div id="dashboard">
+  Welcome <data-name></data-name><br/>
+  Name:<data-name></data-name><br/>
+  DOB:<data-dob></data-dob><br/>
+  Sex:<data-sex></data-sex><br/>
+
+  <br/><button onclick="logout();">Logout</button>
+</div>
+
+</body>
+</html>
