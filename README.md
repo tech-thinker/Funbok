@@ -7,4 +7,5 @@ Funny Facebook Apps Development in simple easy steps.
   3. JavaScript  
 
 ## See our project:
-  Just see our project by [click here.](http://mrasif.github.io/Funbok/)
+  Just see our project by [click here.](http://mrasif.github.io/Funbok/){:target="_blank"}  
+  
