@@ -1,5 +1,5 @@
 # Funbok
-Funny Facebook Apps Development in simple easy steps. 
+Funny Facebook Apps Development in simple easy steps. It is a project by using only front-end languages. If you think you can create a new app or modify exiting app then you are always welcome. Just code for public to gain and share knowledge.
 
 ## Programming Language Required to Develop:
   1. HTML,HTML5
@@ -10,4 +10,4 @@ Funny Facebook Apps Development in simple easy steps.
   Just see our project by [click here.](http://mrasif.github.io/Funbok/)  
 
 ##  Documentation:
-  It is a project by using only front-end languages. If you think you can create a new app or modify exiting app then you are always welcome. Just code for public to gain and share knowledge.
+  Documentation will publish soon.
